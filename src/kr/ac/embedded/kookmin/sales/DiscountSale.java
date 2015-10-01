@@ -12,7 +12,7 @@ public class DiscountSale extends Sale {
 								
 	public DiscountSale() {
 		/** 구현 하시오 **/ 
-	    super("No_Name",0);
+	    getName();
 	    this.discount=0;
 	}
 	
@@ -23,7 +23,7 @@ public class DiscountSale extends Sale {
 	public DiscountSale(String theName, double thePrice, double theDiscount) {
 		/** 구현 하시오 **/
 		super(theName,thePrice);
-		this.discount = theDiscount;
+		this.discount=theDiscount;
 	}
 	
 	public DiscountSale(DiscountSale originalObject) {
@@ -38,7 +38,7 @@ public class DiscountSale extends Sale {
 	public double bill() {
 		/** 구현 하시오 **/ 
 	double price = getPrice();
-	return price - price * (this.discount / 100);
+	return price-price*(this.discount/100);
 	}
 	
 	public double getDiscount() {
@@ -51,7 +51,7 @@ public class DiscountSale extends Sale {
 	 */
 	public void setDiscount(double newDiscount) {
 		/** 구현 하시오 **/ 
-		this.discount = newDiscount;
+		this.discount=newDiscount;
 	}
 	
 	public String toString() {
